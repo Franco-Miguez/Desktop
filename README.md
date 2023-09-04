@@ -2,7 +2,7 @@
 ## Install
 
 ```
-sudo pacman -Syu i3-gaps rofi i3status kitty zsh feh nvim keepass git flatpak
+sudo pacman -Syu i3-gaps rofi i3status kitty zsh feh nvim keepass git flatpak bluez bluez-utils blueman
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 flatpak install flathub com.brave.Browser spotify com.valvesoftware.Steam
