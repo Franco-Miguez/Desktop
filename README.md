@@ -9,7 +9,7 @@ flatpak install flathub com.brave.Browser spotify com.valvesoftware.Steam
 
 ```
 ## Fonts
-
+```
   mkdir -p ~/.local/share/fonts
   cp ./fonts/* ~/.local/share/fonts/
   fc-cache -fv
