@@ -1,0 +1,36 @@
+# Este es un archivo de configuración para Rofi con comentarios en español.
+# Puedes personalizar estas opciones según tus preferencias.
+
+# Cambiar el tema a "nordic"
+theme: nordic
+
+# Configuración de la fuente (puedes ajustarla según tus preferencias)
+font: "Noto Sans 10"
+
+# Habilitar la búsqueda en tiempo real mientras escribes (true/false)
+# Si se establece en true, Rofi buscará coincidencias a medida que escribes.
+# Si se establece en false, esperará hasta que presiones Enter.
+window-enable-search: true
+
+# Ubicación de los directorios donde buscar aplicaciones
+drun-search-path: "~/Aplicaciones:~/.local/share/applications:/usr/share/applications"
+
+# Habilitar iconos para aplicaciones (requiere una fuente de iconos compatible)
+show-icons: true
+
+# Comando para lanzar Rofi en modo "drun" (aplicaciones)
+# Puedes cambiar el comando a tu lanzador de aplicaciones preferido.
+drun: rofi -show drun -font "Noto Sans 10"
+
+# Atajo de teclado para refrescar Rofi
+key-activate: "Super+Space"
+
+# Configuración de colores (puedes personalizarlos según tus preferencias)
+* {
+    background: #002B36;
+    foreground: #839496;
+    selection-background: #073642;
+    selection-foreground: #93A1A1;
+    urgent-background: #DC322F;
+}
+

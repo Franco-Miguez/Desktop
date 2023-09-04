@@ -1,0 +1,69 @@
+{
+  "languageserver": {
+    "html": {
+      "command": "html-languageserver",
+      "args": ["--stdio"],
+      "filetypes": ["html", "htmldjango"],
+      "initializationOptions": {},
+      "settings": {}
+    },
+    "css": {
+      "command": "css-languageserver",
+      "args": ["--stdio"],
+      "filetypes": ["css", "scss", "less"],
+      "initializationOptions": {},
+      "settings": {}
+    },
+    "python": {
+      "command": "pyright",
+      "args": ["--stdio"],
+      "filetypes": ["python"],
+      "initializationOptions": {},
+      "settings": {}
+    },
+    "javascript": {
+      "command": "tsserver",
+      "args": ["--stdio"],
+      "filetypes": ["javascript", "javascriptreact", "javascript.jsx"],
+      "initializationOptions": {},
+      "settings": {}
+    },
+    "typescript": {
+      "command": "tsserver",
+      "args": ["--stdio"],
+      "filetypes": ["typescript", "typescriptreact", "typescript.tsx"],
+      "initializationOptions": {},
+      "settings": {}
+    }
+  },
+  "css": {
+    "validate": true,
+    "lint": {
+      "csscomb": true
+    }
+  },
+  "html": {
+    "suggest": {
+      "completeOnAutoClose": true
+    }
+  },
+  "python": {
+    "formatting.provider": "black",
+    "analysis.autoSearchPaths": [
+      "workspace"
+    ],
+    "analysis.extraPaths": [],
+    "pythonPath": "python"
+  },
+  "tailwindCSS": {
+    "emmetCompletions": true
+  },
+  "react": {
+    "settings": {
+      "react": {
+        "version": "detect"
+      }
+    }
+  }
+}
+

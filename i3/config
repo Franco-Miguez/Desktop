@@ -1,0 +1,103 @@
+# class                 border  bground text    indicator child_border
+client.focused          #6272A4 #6272A4 #F8F8F2 #6272A4   #6272A4
+client.focused_inactive #44475A #44475A #F8F8F2 #44475A   #44475A
+client.unfocused        #282A36 #282A36 #BFBFBF #282A36   #282A36
+client.urgent           #44475A #FF5555 #F8F8F2 #FF5555   #FF5555
+client.placeholder      #282A36 #282A36 #F8F8F2 #282A36   #282A36
+
+client.background       #F8F8F2
+
+# Configuración básica de i3
+set $mod Mod4
+
+# Abrir una terminal con Kitty
+bindsym $mod+Return exec kitty
+
+# Lanzar Rofi (un lanzador de aplicaciones)
+bindsym $mod+d exec rofi -show drun
+
+# Aplicar el diseño de ventana "gaps" (espacios entre ventanas)
+gaps inner 5
+gaps outer 5
+
+# Mostrar el estado del sistema en la barra de estado
+bar {
+    status_command i3status -c ~/.config/i3/i3status.conf
+    separator_symbol ""
+    font pango:DejaVu Sans Mono 10P
+colors {
+    background #282A36
+    statusline #F8F8F2
+    separator  #44475A
+
+    focused_workspace  #44475A #44475A #F8F8F2
+    active_workspace   #282A36 #44475A #F8F8F2
+    inactive_workspace #282A36 #282A36 #BFBFBF
+    urgent_workspace   #FF5555 #FF5555 #F8F8F2
+    binding_mode       #FF5555 #FF5555 #F8F8F2
+  }
+}
+
+# Atajos de teclado para navegar entre ventanas
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+# Atajos de teclado para mover ventanas
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+# Atajo de teclado para salir de i3
+bindsym $mod+Shift+e exit
+
+# Atajo de teclado para cerrar aplicaciones
+bindsym $mod+Shift+q kill
+
+# Cambiar entre áreas de trabajo con Mod+ números (de 1 a 9)
+bindsym $mod+1 workspace ""
+bindsym $mod+2 workspace ""
+bindsym $mod+3 workspace ""
+bindsym $mod+4 workspace ""
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+
+#para verificar la primera es la instance la segunda es la class
+#xprop | grep WM_CLASS
+# Asignar Brave a la segunda área de trabajo
+assign [class="Brave-browser"] → 
+assign [class="steam"] → 
+assign [class="discord"] → 
+assign [class="Spotify"] → 
+assign [class="code-oss"] → 
+
+
+# Atajo de teclado para hacer foco con Mod+f
+bindsym $mod+f fullscreen toggle
+
+# Atajo para ocultar o mostrar la barra de estado
+bindsym $mod+b bar mode toggle
+
+# Aumentar volumen
+bindsym $mod+plus exec --no-startup-id amixer set Master 5%+ unmute
+
+# Disminuir volumen
+bindsym $mod+minus exec --no-startup-id amixer set Master 5%- unmute
+
+# Volumen Mute
+bindsym $mod+m exec amixer set Master toggle
+
+
+# Configuración de fondo de pantalla con feh
+exec --no-startup-id feh --bg-scale ~/.config/i3/Wallpaper/luffy.jpg
+
+# Otros atajos de teclado personalizables
+# Agrega tus propios atajos de teclado personalizados aquí
+
+# Iniciar i3 al inicio de la sesión
+exec i3
