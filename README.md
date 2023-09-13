@@ -2,10 +2,19 @@
 ## Install
 
 ```
-sudo pacman -Syu i3-gaps rofi i3status kitty zsh feh nvim keepass git flatpak bluez bluez-utils blueman
+sudo pacman -Syu rofi kitty zsh feh neovim keepass flatpak bluez bluez-utils blueman spotify-launcher
+sudo pacman -S --needed base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
+$ yay -S brave
+
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-flatpak install flathub com.brave.Browser spotify com.valvesoftware.Steam
+modprobe btusb
+sudo systemctl enable bluetooth.service
+sudo systemctl start bluetooth.service
+
+
+
+flatpak install flathub com.valvesoftware.Steam com.visualstudio.code
 
 ```
 ## Fonts
@@ -28,6 +37,8 @@ flatpak install flathub com.brave.Browser spotify com.valvesoftware.Steam
 ## nvim
 ```
   cp ./nvim ~/.config/
+  curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
+:PlugInstall
 
 

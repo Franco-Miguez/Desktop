@@ -74,6 +74,7 @@ assign [class="Brave-browser"] → 
 assign [class="steam"] → 
 assign [class="discord"] → 
 assign [class="Spotify"] → 
+assign [class="Brave-browser" instance="crx_pjibgclleladliembfgfagdaldikeohf"] → 
 assign [class="code-oss"] → 
 
 
@@ -83,14 +84,15 @@ bindsym $mod+f fullscreen toggle
 # Atajo para ocultar o mostrar la barra de estado
 bindsym $mod+b bar mode toggle
 
+
 # Aumentar volumen
-bindsym $mod+plus exec --no-startup-id amixer set Master 5%+ unmute
+bindsym $mod+plus exec pactl set-sink-volume @DEFAULT_SINK@ +5%
 
 # Disminuir volumen
-bindsym $mod+minus exec --no-startup-id amixer set Master 5%- unmute
+bindsym $mod+minus exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 
 # Volumen Mute
-bindsym $mod+m exec amixer set Master toggle
+bindsym $mod+m exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 
 # Configuración de fondo de pantalla con feh
