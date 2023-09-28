@@ -5,6 +5,10 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# Remapear j y k para desplazamiento en Kitty
+bindkey -s "^[j" " \eOA"
+bindkey -s "^[k" " \eOB"
+
 
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 

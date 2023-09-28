@@ -2,7 +2,7 @@
 ## Install
 
 ```
-sudo pacman -Syu rofi kitty zsh zsh-autosuggestions zsh-syntax-highlighting feh neovim keepass flatpak bluez bluez-utils blueman spotify-launcher picom unzip bat lsd pavucontrol flameshot p7zip
+sudo pacman -Syu rofi kitty zsh zsh-autosuggestions zsh-syntax-highlighting feh neovim keepass flatpak bluez bluez-utils blueman spotify-launcher picom bat lsd pavucontrol flameshot p7zip
 ```
 ## Hacking
 curl -O https://blackarch.org/strap.sh
